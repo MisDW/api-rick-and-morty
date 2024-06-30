@@ -1,26 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container__characters">
+    <h1 class="title__characters">🛸 Rick and Morty 🚀</h1>
+    <FilterName />
+    <FilterStatus />
+    <ListCharacters />
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import ListCharacters from "@/components/listCharacters.vue"; 
+import FilterStatus from "@/components/filterStatus.vue"; 
+import FilterName from "@/components/filterName.vue"
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" scoped>
+.container__characters{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  gap: 20px;
+  // background: red;   
 }
+
+.title__characters{
+  color: #eaeaea;
+}
+
 </style>
+
