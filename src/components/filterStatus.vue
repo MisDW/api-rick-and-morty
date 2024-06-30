@@ -51,6 +51,7 @@ const filter = ( (  status ) =>{
 
     @media screen and (max-width: 500px){
         .filter{
+            width: 100%;
             display: flex;
             flex-direction: row;
             gap: 20px;
